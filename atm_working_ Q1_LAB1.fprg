@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22029"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 11:14:15 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyOTsyMDIyMjNNQVlDMDA2NjsyMDIyLTExLTE4OzEwOjQ1OjM0IEFNOzMzMjM="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyOTsyMDIyMjNNQVlDMDA2NjsyMDIyLTExLTE4OzExOjE0OjE1IEFNOzU7MzQzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="String" array="False" size=""/>
+            <comment text="entering name"/>
+            <output expression="&quot;Enter name&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <comment text="entering account number"/>
+            <output expression="&quot;Enter Account number&quot;" newline="True"/>
+            <input variable="a"/>
+            <comment text="checking if account no is right or wrong"/>
+            <if expression="a=2021">
+                <then>
+                    <comment text="entering pin"/>
+                    <declare name="p" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Enter pin&quot;" newline="True"/>
+                    <comment text="checking if pin is right or wrong"/>
+                    <input variable="p"/>
+                    <if expression="p=8900">
+                        <then>
+                            <declare name="amt" type="Integer" array="False" size=""/>
+                            <comment text="entering amount"/>
+                            <output expression="&quot;Enter amount&quot;" newline="True"/>
+                            <input variable="amt"/>
+                            <comment text="checking if amount is above 500"/>
+                            <if expression="a&gt;500">
+                                <then>
+                                    <output expression="&quot;Your amount&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Only amount more than 500 valid &quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Wrong pin&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Wrong password&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Thankyou for using key bank&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
