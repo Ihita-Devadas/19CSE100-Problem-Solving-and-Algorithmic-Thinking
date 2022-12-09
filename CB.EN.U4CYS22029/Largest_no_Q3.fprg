@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Harini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:56:52 PM"/>
+        <attribute name="created" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTsxMDo1NTowNCBBTTsyNjEz"/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTsxMDo1NjowMCBBTTsxO0hhcmluaTtCVUNFUEhBTFVTOzIwMjItMTItMDY7MDI6MzQ6NTQgUE07QVJSQVkuZnByZzs2MzI0"/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTsxMToxNzo0NyBBTTszOzI3Mjk="/>
+        <attribute name="edited" value="SUhUQTtMQVBUT1AtSEpJNU5RMDk7MjAyMi0xMi0wOTswOTo1Njo1MiBQTTsxOzI3MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variable"/>
+            <declare name="index, a, v" type="Integer" array="False" size=""/>
+            <declare name="numbers" type="Integer" array="True" size="5"/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <comment text="starting of FOR LOOP"/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the numbers for index=[&quot;&amp;index&amp;&quot;]&quot;" newline="True"/>
+                <comment text="inputing number"/>
+                <input variable="number"/>
+                <assign variable="numbers[index]" expression="number"/>
+            </for>
+            <output expression="&quot;Finding the largest number amongst these elements&quot;" newline="True"/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Array content fruits [&quot;&amp;index&amp;&quot;]=&quot;&amp;numbers[index]" newline="True"/>
+            </for>
+            <output expression="&quot;The largest number is:&quot;" newline="True"/>
+            <assign variable="a" expression="0"/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <comment text="starting of IF LOOP"/>
+                <if expression="a&lt;numbers[index]">
+                    <then>
+                        <assign variable="v" expression="numbers[index]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Displaying the largest number amonst these elements"/>
+            <output expression="v" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Harini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 10:38:12 PM"/>
+        <attribute name="created" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTsxMToxODowMSBBTTsyNjEw"/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTsxMToxODo1OSBBTTsxO0hhcmluaTtCVUNFUEhBTFVTOzIwMjItMTItMDY7MDI6MzQ6NTQgUE07QVJSQVkuZnByZzs2MzM3"/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTsxMToyNjo1MSBBTTsyOzI3MjM="/>
+        <attribute name="edited" value="SUhUQTtMQVBUT1AtSEpJNU5RMDk7MjAyMi0xMi0wOTsxMDozODoxMiBQTTszOzI3MjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="input index and n"/>
+            <declare name="index, n" type="Integer" array="False" size=""/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number elements to be entered:&quot;" newline="True"/>
+            <comment text="input no.of elements"/>
+            <input variable="n"/>
+            <declare name="numbers" type="Integer" array="True" size="n"/>
+            <comment text="starting of FOR LOOP"/>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter the number for index=[&quot;&amp;index&amp;&quot;]&quot;" newline="True"/>
+                <input variable="number"/>
+                <assign variable="numbers[index]" expression="number"/>
+            </for>
+            <comment text="Displaying the frequency of elements"/>
+            <output expression="&quot;Total no.of elements in an array is:&quot;&amp;n" newline="True"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Desired number&quot;" newline="True"/>
+            <input variable="num"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="starting of while loop"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <comment text="starting of if loop"/>
+                <if expression="numbers[i]==num">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;count &quot;&amp;count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

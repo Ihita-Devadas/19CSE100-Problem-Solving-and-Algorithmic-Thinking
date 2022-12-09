@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Harini"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:35:02 PM"/>
+        <attribute name="created" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTswOTozMjoyNiBBTTsyNjIw"/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTswOTozNDozNyBBTTsxO0hhcmluaTtCVUNFUEhBTFVTOzIwMjItMTItMDk7MDk6MDU6NDcgQU07NTQxNA=="/>
+        <attribute name="edited" value="SGFyaW5pO0JVQ0VQSEFMVVM7MjAyMi0xMi0wOTswNjo1OToxMCBQTTs3OzI3NDg="/>
+        <attribute name="edited" value="SUhUQTtMQVBUT1AtSEpJNU5RMDk7MjAyMi0xMi0wOTswOTozNTowMiBQTTs0OzI3MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variable"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;No. of Students:&quot;" newline="True"/>
+            <comment text="input of no of students"/>
+            <input variable="n"/>
+            <declare name="math, phy, english, PSAT, crypto, Rollno, Total, Avg" type="Integer" array="True" size="n"/>
+            <declare name="x, value" type="Integer" array="False" size=""/>
+            <for variable="x" start="0" end="n-1" direction="inc" step="1">
+                <comment text="input for roll no"/>
+                <output expression="&quot;Enter the Rollno:&quot;" newline="True"/>
+                <input variable="value"/>
+                <assign variable="Rollno[x]" expression="value"/>
+                <comment text="input for each subject"/>
+                <output expression="&quot;Enter the marks for each subject:&quot;" newline="True"/>
+                <output expression="&quot;Mathematics:&quot;" newline="True"/>
+                <input variable="value"/>
+                <assign variable="math[x]" expression="value"/>
+                <output expression="&quot;Physics:&quot;" newline="True"/>
+                <input variable="value"/>
+                <assign variable="phy[x]" expression="value"/>
+                <output expression="&quot;English:&quot;" newline="True"/>
+                <input variable="value"/>
+                <assign variable="english[x]" expression="value"/>
+                <comment text="Calculating total marks"/>
+                <assign variable="Total[x]" expression="math[x]+phy[x]+english[x]"/>
+                <comment text="calculating average"/>
+                <assign variable="Avg[x]" expression="Total[x]/3"/>
+            </for>
+            <output expression="&quot;Details of each student:&quot;" newline="True"/>
+            <comment text=" details of the student"/>
+            <for variable="x" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Roll number:&quot;&amp;Rollno[x]" newline="True"/>
+                <output expression="&quot;Marks of the student for each subject:&quot;&amp;math[x]&amp;&quot;, &quot;&amp;phy[x]&amp;&quot;, &quot;&amp;english[x]&amp;&quot;&quot;" newline="True"/>
+                <output expression="&quot;Total marks :&quot;&amp;Total[x]" newline="True"/>
+                <output expression="&quot;Average marks :&quot;&amp;Avg[x]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

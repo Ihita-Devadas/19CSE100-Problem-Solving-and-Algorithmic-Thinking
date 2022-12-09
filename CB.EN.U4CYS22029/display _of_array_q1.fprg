@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="IHTA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 10:34:42 AM"/>
+        <attribute name="created" value="SUhUQTtMQVBUT1AtSEpJNU5RMDk7MjAyMi0xMi0wOTsxMDoyMDozMSBBTTsyNTkz"/>
+        <attribute name="edited" value="SUhUQTtMQVBUT1AtSEpJNU5RMDk7MjAyMi0xMi0wOTsxMDozNDo0MiBBTTsxOzI3MDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="vegetables" type="String" array="True" size="10"/>
+            <declare name="vegetable" type="String" array="False" size=""/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Enter the vegetable name for index=[&quot;&amp;index&amp;&quot;]&quot;" newline="True"/>
+                <input variable="vegetable"/>
+                <assign variable="vegetables[index]" expression="vegetable"/>
+            </for>
+            <output expression="&quot;array contents&quot;" newline="True"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Array content vegetables[&quot;&amp;index&amp;&quot;]=&quot;&amp; vegetables[index]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
